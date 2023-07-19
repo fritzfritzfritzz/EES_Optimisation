@@ -267,10 +267,10 @@ for i in range(result.shape[0]):
 
     # print the KPIs 
     title_1.write( f"Savings for the next 24 h:")
-    savings_2.subheader(f'{daily_savings.iloc[i+offset]} €')
+    savings_2.subheader('{:.0f} €'.format(daily_savings.iloc[i+offset]))
 
     title_3.write( "Total accumulated savings:")
-    savings_3.subheader( f'{total_savings.iloc[i+offset]} €')
+    savings_3.subheader('{:.0f} €'.format(total_savings.iloc[i+offset]))
 
     # Pause for simulation speed
     time.sleep(0.02)
