@@ -65,10 +65,13 @@ for i in range(num_iterations):
     # Pause for simulation speed
     # Update plot
     plot.pyplot(fig)
+
+
+    
     #plot.line_chart(random_walk[:i+1])
     # Pause for simulation speed
-    time.sleep(1)
-
-
+    time.sleep(0.4)
+st.header('KPIs ')
+st.subheader(f"Savings today: {result2[1][0][0]}")
 # Display the plot
 #st.pyplot(fig)
