@@ -104,5 +104,6 @@ def optimize_charging_schedule(price: np.ndarray,
     optimal_buy = np.array([pulp.value(charge[t]) for t in range(window)])
     optimal_sell = np.array([pulp.value(discharge[t]) for t in range(window)])
     optimal_charge = np.array([pulp.value(charge[t]) + pulp.value(solar[t]) for t in range(window)])
+    optimal_soc = np.array([pulp.value(soc[t]) for t in range(window)])
 
-    return optimal_charge, optimal_buy, optimal_sell, objective_value, status_msg
+    return optimal_charge, optimal_buy, optimal_sell, optimal_soc, objective_value, status_msg
